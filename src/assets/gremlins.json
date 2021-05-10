@@ -1,0 +1,14 @@
+[
+    {"nom":"Mohammed", "description":"Il est tout mignon...", "img":"/assets/Gentils/1.jpg", "status":"Mignon", "taille":"52cm"},
+    {"nom":"Gérald", "description":"JE VAIS MANGER TOUT", "img":"/assets/Mechants/1.jpg", "status":"Mechant", "taille":"61cm"},
+    {"nom":"Khalil", "description":"Miam miam couscouss...", "img":"/assets/Gentils/2.jpg", "status":"Mignon", "taille":"61cm"},
+    {"nom":"Kévin", "description":"Oulaaaaaaa", "img":"/assets/Gentils/3.jpg", "status":"Mignon", "taille":"61cm"},
+    {"nom":"Paul", "description":"ouééééééé...", "img":"/assets/Gentils/4.jpg", "status":"Mignon", "taille":"52cm"},
+    {"nom":"Romain", "description":"moi moche et méchant...", "img":"/assets/Mechants/2.jpg", "status":"Mechant", "taille":"52cm"},
+    {"nom":"Stephane", "description":"Il est tout mignon...", "img":"/assets/Gentils/1.jpg", "status":"Mignon", "taille":"52cm"},
+    {"nom":"Nawal", "description":"JE VAIS MANGER TOUT", "img":"/assets/Mechants/1.jpg", "status":"Mechant", "taille":"61cm"},
+    {"nom":"Colin", "description":"Miam miam couscouss...", "img":"/assets/Gentils/2.jpg", "status":"Mignon", "taille":"61cm"},
+    {"nom":"Ruddy", "description":"Oulaaaaaaa", "img":"/assets/Gentils/3.jpg", "status":"Mignon", "taille":"61cm"},
+    {"nom":"Pierre", "description":"ouééééééé...", "img":"/assets/Gentils/4.jpg", "status":"Mignon", "taille":"52cm"},
+    {"nom":"Nabil", "description":"moi moche et méchant...", "img":"/assets/Mechants/2.jpg", "status":"Mechant", "taille":"52cm"}
+]

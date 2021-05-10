@@ -1,0 +1,24 @@
+<section>
+    <form #ctlF="ngForm">
+        <label for="nom"></label>
+        <input name="nom" required placeholder="Votre nom" [(ngModel)]="alerte.nom">
+        <label for="coordonnees"></label>
+        <input name="coordonnees" required placeholder="Vos coordonnées" [(ngModel)]="alerte.coordonnes" #ctlCoo="ngModel">
+        <span *ngIf="ctlCoo.invalid">On a pas tes coordonnées</span>
+
+        <label for="menace">Qualifiez le niveau de la menace</label>
+        <select name="menace" [(ngModel)]="alerte.menace">
+            <option value="0">Choisissez un niveau de menace</option>
+            <option value="1">Une info en passant</option>
+            <option value="100000">Mortelle</option>
+            <option value="200000">Cataclysmique</option>
+            <option value="5000000000">Apocalyptique</option>
+        </select>
+       
+        <label for="message">Décrivez la nature de la menace</label>
+        <textarea name="message" [(ngModel)]="alerte.message"></textarea>
+       
+        <input type="submit" value="Envoyer" [disabled]="ctlF.invalid">
+        <input type="reset" value="Ca va mieux, j'annule c'était juste un petit coup de stress">
+    </form>
+</section>

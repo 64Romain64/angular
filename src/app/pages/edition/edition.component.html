@@ -1,0 +1,38 @@
+<section>
+    <form #ctlF="ngForm">
+        <label for="nom">Nom du Gremlins</label>
+        <input name="nom" required [(ngModel)]="creation.nom" #ctlNom="ngModel">
+        <span *ngIf="ctlNom.invalid">On a besoin d'un nom</span>
+
+        <label for="description du Gremlins">Description du Gremlins</label>
+        <textarea name="description" [(ngModel)]="creation.description"></textarea>
+
+        <label for="image">Image du gremlins</label>
+        <input type="file" name="image" required [(ngModel)]="creation.img" #ctlImg="ngModel">
+        <span *ngIf="ctlImg.invalid">On veut voir sa tronche</span>
+
+        <label for="status">Status</label>
+        <select name="status" [(ngModel)]="creation.status" #ctlSts="ngModel">
+            <option value="0">Choisissez son status</option>
+            <option value="Mechant">Mechant</option>
+            <option value="Gentil">Gentil</option>
+        </select>  
+        <span *ngIf="ctlSts.invalid">Gentil ou méchant ??????</span>
+
+        <label for="taille">Taille</label>
+        <input name="taille" [(ngModel)]="creation.taille">
+
+        <label for="specialites">Specialités</label>
+        <input name="specialites" [(ngModel)]="creation.specialites">
+
+        <label for="sexe">Sexe</label>
+        <select name="sexe" [(ngModel)]="creation.sexe">
+            <option value="0">Choisissez son sexe</option>
+            <option value="Mechant">Garçon</option>
+            <option value="Gentil">Fille</option>
+        </select>
+
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Pas envie d'en rajouter un">
+    </form>
+</section>

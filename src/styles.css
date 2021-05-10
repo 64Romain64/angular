@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+    padding: O;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+h1, h2, h3{
+    font-family: 'Lobster', cursive;
+}
+
+div{
+    margin-left: 2vh;
+}
+
+
+/* FORMULAIRE */
+input.ng-pristine{
+    border :1px gray solid;
+}
+
+input.ng-valid{
+    border-bottom:green 3px solid;
+}
+
+input.ng-invalid{
+    border-bottom: red 1px solid;
+}
+
+input.ng-touched{
+    border-top:orange 1px solid
+}
+
+form{
+    display:flex;
+    flex-flow: column nowrap;
+}
+form>*{
+    margin: 10px auto;
+    width: auto;
+}
+
+form>span{
+    color : red
+}

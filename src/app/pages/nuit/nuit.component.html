@@ -1,0 +1,14 @@
+<section>
+    <h2>Les gremlins la nuit</h2>
+    <article *ngFor="let g of gremlinsServ.gremlins">
+        <div *ngIf="g.status == 'Mechant'">
+            <h3>{{ g.nom }}</h3>
+            <img [src]="g.img" [alt]="g.description">
+            <p>{{ g.description }}</p>
+            <ul>
+                <li>Status : {{ g.status }}</li>
+                <li>Taille : {{ g.taille }}</li>
+            </ul>
+        </div>
+    </article>
+</section>

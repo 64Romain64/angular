@@ -1,0 +1,26 @@
+<section>
+    <h2>Les mogwaïs le jour</h2>
+    <article *ngIf="bool">
+        <!--Router pour les routes enfants-->
+        <router-outlet></router-outlet>
+    </article>
+    <select [(ngModel)]="tri" (change)="logTri()">
+        <option value="">Tous</option>
+        <option value="Mignon">Les mignons</option>
+        <option value="Mechant">Les méchants</option>
+    </select>
+    <article *ngFor="let g of gremlinsServ.gremlins | slice:debut:fin | mechants:tri" (click)="bool = !bool">
+        <!-- <div *ngIf="g.status == 'Mignon'"> -->
+        <div>
+            <h3>{{ g.nom | lowercase}}</h3>
+            <img [src]="g.img" [alt]="g.description">
+            <p>{{ g.description }}</p>
+            <ul>
+                <li>Status : {{ g.status }}</li>
+                <li>Taille : {{ g.taille }}</li>
+            </ul>
+        </div>
+    </article>
+    <button (click)="paginationMoins()">Moins</button>
+    <button (click)="paginationPLus()">Plus</button>
+</section>

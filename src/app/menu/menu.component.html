@@ -1,0 +1,16 @@
+<nav>
+    <ul>
+      <li><a href routerLink="/">Accueil</a></li>
+      <li><a href routerLink="/jour">Il fait jour</a></li>
+      <li><a href routerLink="/nuit">Il fait nuit</a></li>
+      <li><a href routerLink="/deluge">C'est le déluge</a></li>
+      <li><a href routerLink="/edition">Création d'un Gremlins</a></li>
+      <li><a href routerLink="/contact">Signaler une alter Gremlins</a></li>
+      
+      <!-- <li><a href routerLink="/connexion">Se connecter</a></li> -->
+      <li *ngIf="!authServ.profil.status"><a href routerLink="/connexion">Se connecter</a></li>
+      <li class="deconne" *ngIf="authServ.profil.status > 0 "> <a href routerLink="/connexion" (click)="authServ.deconne()">Se déconnecter</a></li>
+      
+      <li *ngIf="authServ.profil.status > 0"><a href routerLink="/admin">Admin</a></li>
+    </ul>
+  </nav>

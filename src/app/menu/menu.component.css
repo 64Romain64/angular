@@ -1,0 +1,27 @@
+li{
+    display: inline-block;
+    padding: 8px 16px;
+    margin : 5px;
+    background-color: yellow;
+    color: black;
+    transition: all .3s ease;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li:hover{
+    background-color: orangered;
+    color:white;
+}
+
+.deconne{
+    background-color: red;
+    color: white;
+}
+
+.deconne:hover{
+    background-color: orange;
+}

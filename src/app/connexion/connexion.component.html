@@ -1,0 +1,15 @@
+<section>
+    <!-- <form #ctlF="ngForm" (submit)="valideID(ctlF)"> -->
+    <form #ctlF="ngForm" (submit)="valideID()" *ngIf="!authServ.profil.status">
+        <input name="identifiant" required [(ngModel)]="user.identifiant" (input)="logUser()" #ctlId="ngModel">
+        <span *ngIf="ctlId.invalid">Merci de renseigner l'identifiant</span>
+        <input name="motdepasse" type="password" minlength="6" required [(ngModel)]="user.motdepasse" (input)="logUser()" #ctlMdp="ngModel">
+        <span *ngIf="ctlMdp.invalid">Merci de renseigner le mot de passe d'au moins 6 caractères</span>
+        <input type="submit" value="GO GO" [disabled]="ctlF.invalid">
+        <input type="reset" value="perduuuuuuuuuuuuuuuuu">
+    </form>
+    <!-- <article *ngIf="authServ.profil.status > 0 ">
+        <button (click)="authServ.deconne()">Se déconnecter</button>
+    </article> -->
+    <blockquote *ngIf="authServ.erreurHttp.length > 0 ">{{ authServ.erreurHttp }}</blockquote>
+</section>
